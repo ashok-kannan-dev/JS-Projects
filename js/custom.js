@@ -7,7 +7,8 @@ const displayTime = () => {
   const month = document.querySelector('.month');
   const getMonth = currentTime.getMonth() + 1;
 
-  hours.innerHTML = ((currentTime.getHours() % 12 || 12) < 10 ? '0' : '') + currentTime.getHours();
+  let currentHour = currentTime.getHours() % 12 || 12;
+  hours.innerHTML = (currentHour < 10 ? '0' : '') + currentHour;
   minutes.innerHTML = (currentTime.getMinutes() < 10 ? '0' : '') + currentTime.getMinutes();
   seconds.innerHTML = (currentTime.getSeconds() < 10 ? '0' : '') + currentTime.getSeconds();
   date.innerHTML = (currentTime.getDate() < 10 ? '0' : '') + currentTime.getDate();
