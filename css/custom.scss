@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.clock-parent {
+  width: 100%;
+  height: 100vh;
+  background-color: #000333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .clock-interface {
+    width: 600px;
+    height: 350px;
+    background-color: #090c46;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 4%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-flow: column wrap;
+    position: relative;
+    .date-interface {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-size: 25px;
+        width: 40px;
+        &::before {
+          content: unset;
+        }
+        &::after {
+          font-size: 12px;
+        }
+      }
+      .date {
+        &::after {
+          content: 'Date';
+        }
+      }
+      .month {
+        &::after {
+          content: 'Month';
+        }
+      }
+    }
+    .time-interface {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    span {
+      font-size: 70px;
+      margin: 0 10px;
+      width: 150px;
+      position: relative;
+      &::after {
+        font-size: 13px;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+      &::before {
+        content: ':';
+        position: absolute;
+        right: -20px;
+      }
+    }
+    span:last-child {
+      &::before {
+        content: unset;
+      }
+    }
+    .hours {
+      &::after {
+        content: 'Hours';
+      }
+    }
+    .minutes {
+      &::after {
+        content: 'Minutes';
+      }
+    }
+    .seconds {
+      &::after {
+        content: 'Seconds';
+      }
+    }
+  }
+}

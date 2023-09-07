@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.clock-parent {
+  width: 100%;
+  height: 100vh;
+  background-color: #000333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock-parent .clock-interface {
+  width: 600px;
+  height: 350px;
+  background-color: #090c46;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-flow: column wrap;
+  position: relative;
+}
+.clock-parent .clock-interface .date-interface {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock-parent .clock-interface .date-interface span {
+  font-size: 25px;
+  width: 40px;
+}
+.clock-parent .clock-interface .date-interface span::before {
+  content: unset;
+}
+.clock-parent .clock-interface .date-interface span::after {
+  font-size: 12px;
+}
+.clock-parent .clock-interface .date-interface .date::after {
+  content: "Date";
+}
+.clock-parent .clock-interface .date-interface .month::after {
+  content: "Month";
+}
+.clock-parent .clock-interface .time-interface {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock-parent .clock-interface span {
+  font-size: 70px;
+  margin: 0 10px;
+  width: 150px;
+  position: relative;
+}
+.clock-parent .clock-interface span::after {
+  font-size: 13px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.clock-parent .clock-interface span::before {
+  content: ":";
+  position: absolute;
+  right: -20px;
+}
+.clock-parent .clock-interface span:last-child::before {
+  content: unset;
+}
+.clock-parent .clock-interface .hours::after {
+  content: "Hours";
+}
+.clock-parent .clock-interface .minutes::after {
+  content: "Minutes";
+}
+.clock-parent .clock-interface .seconds::after {
+  content: "Seconds";
+}
